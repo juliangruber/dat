@@ -38,6 +38,10 @@ module.exports = function (args) {
     dat.stats.rateUp(data.length)
   })
 
+  dat.on('upload', function (data) {
+    dat.stats.rateUp(data.length)
+  })
+
   dat.on('file-counted', function () {
     var msg = 'Calculating Size: '
     msg += dat.stats.filesTotal + ' items '
