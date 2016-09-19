@@ -90,7 +90,7 @@ module.exports = function (args) {
 
     var msg = ui.progress(bytesProgress / bytesTotal)
     msg += ' ' + addText + chalk.bold(files) + ' items'
-    msg += chalk.dim(' (' + prettyBytes(bytesProgress) + '/' + prettyBytes(bytesTotal) + ')')
+    msg += chalk.dim(' (Size: ' + prettyBytes(bytesTotal) + ')')
     log.status(msg + '\n', 0)
   }
 }
